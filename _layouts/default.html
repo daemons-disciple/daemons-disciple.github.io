@@ -9,6 +9,9 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
+    <!-- Paper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
+    
     <meta name="theme-color" content="#000000">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
     {% include analytics_head.html %}
@@ -27,13 +30,31 @@
               <p class="site-description">{{ site.description }}</p> 
             </div>
 
-            <nav>
-              <a href="{{ site.baseurl }}/">Home</a>
-              <a href="{{ site.baseurl }}/getting-started">Getting Started</a>
-              <a href="{{ site.baseurl }}/search">Search</a>
-              <a href="{{ site.baseurl }}/about">About</a>
-              <a href="{{ site.baseurl }}/archive">Archive</a>
+            <!-- NAVBAR STARTS -->
+
+            <nav class="border border-2 border-dark shadow shadow-large fixed split-nav">
+              <div class="nav-brand">
+                <h3><img src="logo.png" alt="logo" width="59vh" class="border-white"></h3>
+              </div>
+              <div class="collapsible">
+                <input id="collapsible1" type="checkbox" name="collapsible1">
+                <label for="collapsible1">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </label>
+                <div class="collapsible-body">
+                  <ul class="inline">
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Github</a></li>
+                  </ul>
+                </div>
+              </div>
             </nav>
+
+            <!-- NAVBAR ENDS -->
+
           </header>
         </div>
       </div>
