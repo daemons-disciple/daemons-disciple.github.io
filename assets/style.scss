@@ -25,7 +25,7 @@ body {
   color: #404040;
   line-height: 1.7;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   height: 100%;
 }
 
@@ -143,7 +143,7 @@ table tr td :last-child {
   display: inline-block;
   box-sizing: border-box;
   font-size: 18px;
-  background-color: #fff3ff;
+  background-color: #eee;
 }
 
 .share-box {
@@ -441,7 +441,6 @@ body:after {
 
 .post h1{
   text-align: center;
-  font-weight: bold;
   font-kerning: auto;
   font-feature-settings: "kern","liga","dlig","hlig","cswh";
   line-height: 1.2;
@@ -449,7 +448,6 @@ body:after {
 
 .page h1{
   text-align: center;
-  font-weight: bold;
   font-kerning: auto;
   font-feature-settings: "kern","liga","dlig","hlig","cswh";
   line-height: 1.2;
