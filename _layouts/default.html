@@ -9,9 +9,9 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-    <!-- Wiredjs -->
+    <!-- Wired JS -->
     <script type="module" src="https://unpkg.com/wired-elements?module"></script>
-
+    
     <!-- Paper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
     
@@ -49,7 +49,16 @@
                   <ul class="inline">
                     <li><a href="{{ site.baseurl }}/">Home</a></li>
                     <li><a href="{{ site.baseurl }}/archive">Archive</a></li>
-                    <li><a href="{{ site.baseurl }}/search">Search</a></li>
+                    <li>
+
+                      <div id="search-container">
+                        <wired-search-input placeholder="Search here" style="font-family: Neucha,sans-serif;" elevation="3">
+                            Search box
+                        </wired-search-input>
+                        <ul id="results-container"></ul>
+                    </div>
+
+                    </li>
                     <li><a href="https://shubhendra-rajkarne.github.io/">Portfolio</a></li>
                   </ul>
                 </div>
@@ -76,6 +85,18 @@
         </div>
       </div>
     </div>
+
+
+    <script src="{{ site.baseurl }}/assets/simple-jekyll-search.min.js" type="text/javascript"></script>
+
+    <script>
+        SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        searchResultTemplate: '<div style="text-align: left !important;"><a href="{url}"><h1 style="text-align:left !important;">{title}</h1></a><span style="text-align:left !important;">{date}</span></div>',
+        json: '{{ site.baseurl }}/search.json'
+        });
+    </script>
 
     <!-- {% include analytics.html %} -->
   </body>
