@@ -5,9 +5,7 @@ permalink: /search/
 ---
 
 <div id="search-container">
-    <wired-search-input type="text" id="search-input" placeholder="Search through blog post titles ..." style="font-family: Neucha,sans-serif;" elevation="3">
-        Search box
-    </wired-search-input>
+    <input type="text" class="border border-2 border-dark shadow shadow-large" id="search-input" placeholder="Search through blog post titles ..." style="font-family: Neucha,sans-serif;" elevation="3">
     <ul id="results-container"></ul>
 </div>
 
