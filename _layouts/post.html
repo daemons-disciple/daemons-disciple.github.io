@@ -6,34 +6,61 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   <div>
-    <p class="author_title">{{site.author}}  ·  {{ page.date | date: "%B %e, %Y" }}</p>
+    <p class="author_title">{{site.author}} · {{ page.date | date: "%B %e, %Y" }}</p>
     {% if page.last_modified_at %}
-    <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: {{ page.last_modified_at | date: "%b %-d, %Y" }})</p>
+    <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: {{
+      page.last_modified_at | date: "%b %-d, %Y" }})</p>
     {% endif %}
     <div class="post-tags">
       {% if post %}
-        {% assign categories = post.categories %}
+      {% assign categories = post.categories %}
       {% else %}
-        {% assign categories = page.categories %}
+      {% assign categories = page.categories %}
       {% endif %}
       {% for category in categories %}
-        <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
+      <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+      {% unless forloop.last %}&nbsp;{% endunless %}
       {% endfor %}
     </div>
   </div>
-    
+
   <div class="entry">
     {{ content }}
   </div>
 
+  <!-- Author Card -->
   <div>
-    <p><span class="share-box">Share:</span> <a href="http://twitter.com/share?text={{ page.title }}&url={{site.url}}{{page.url}}" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Facebook</a></p>
+    <style>
+      .text-chunk {
+        overflow: auto;
+      }
+    </style>
+
+    <div class="card">
+      <div class="card-body">
+        <!-- TODO: add my photo -->
+        <img src="/images/logo.png"
+          style="border-radius: 50%; margin-right: 2rem; width: 100%; max-width: 100px; height: auto; aspect-ratio: auto; float: left; display: flex;">
+        <div class="text-chunk">
+          <h4 class="card-title" style="font-family: Neucha,sans-serif; display: block;">Shubhendra Rajkarne</h4>
+          <p class="card-text">A programmer for money and fun and some more description about me..</p>
+        </div>
+
+      </div>
+
+      <div class="card-footer" style="text-align: center;">Follow me on These social media websites. Paste website
+        icons here.</div>
+    </div>
   </div>
 
-  <!--<div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>-->
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l_c_v="#5405fb" data-icon_d_c_v="#fb0514"
+    data-ef_voting="grow" data-rich_snippet="true" data-show_like_label="false" data-voting_frequency="5"
+    data-counter_clickable="true"></span>
+  <script>(function (d, e, s) { if (d.getElementById("likebtn_wjs")) return; a = d.createElement(e); m = d.getElementsByTagName(e)[0]; a.async = 1; a.id = "likebtn_wjs"; a.src = s; m.parentNode.insertBefore(a, m) })(document, "script", "//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+
+  <!-- Add comment section here -->
 
   {% include disqus.html %}
 </article>

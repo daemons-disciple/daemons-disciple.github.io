@@ -1,79 +1,118 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-    {% seo title=false %}
-    {% include meta.html %}
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+<head>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+  {% seo title=false %}
+  {% include meta.html %}
 
-    <!-- Paper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
-    
-    <meta name="theme-color" content="#000000">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
-    {% include analytics_head.html %}
-  </head>
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
+    href="{{ site.baseurl }}/feed.xml" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-  <body>
-    <div class="paper">
-      <div class="wrapper-masthead">
-        <div class="container">
-          <header class="masthead clearfix">
-            <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" /></a> -->
+  <!-- Paper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
 
-            <!-- <div class="site-info">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
+  {% include analytics_head.html %}
+</head>
+
+<body>
+  <div class="paper">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" /></a> -->
+
+          <!-- <div class="site-info">
               <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
               <p class="site-description">{{ site.description }}</p> 
             </div> -->
 
-            <!-- NAVBAR STARTS -->
+          <!-- NAVBAR STARTS -->
 
-            <nav class="border border-2 border-dark shadow shadow-large fixed split-nav">
-              <div class="nav-brand">
-                <h3><img src="/images/logo.png" alt="logo" width="59vh" class="border-white"></h3>
+          <nav class="border border-2 border-dark shadow shadow-large fixed split-nav">
+            <div class="nav-brand">
+              <h3><img src="/images/logo.png" alt="logo" width="59vh" class="border-white"></h3>
+            </div>
+            <div class="collapsible">
+              <input id="collapsible1" type="checkbox" name="collapsible1">
+              <label for="collapsible1">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </label>
+              <div class="collapsible-body">
+                <ul class="inline">
+                  <li><a href="{{ site.baseurl }}/">Home</a></li>
+                  <li><a href="{{ site.baseurl }}/archive">Archive</a></li>
+                  <li><a href="{{ site.baseurl }}/search">Search</a></li>
+                  <li><a href="https://shubhendra-rajkarne.github.io/">Portfolio</a></li>
+                  <li style="all: initial;"><label class="paper-btn btn-primary contact-nav" for="modal-1">Contact Me</label></li>
+                </ul>
               </div>
-              <div class="collapsible">
-                <input id="collapsible1" type="checkbox" name="collapsible1">
-                <label for="collapsible1">
-                  <div class="bar1"></div>
-                  <div class="bar2"></div>
-                  <div class="bar3"></div>
-                </label>
-                <div class="collapsible-body">
-                  <ul class="inline">
-                    <li><a href="{{ site.baseurl }}/">Home</a></li>
-                    <li><a href="{{ site.baseurl }}/archive">Archive</a></li>
-                    <li><a href="{{ site.baseurl }}/search">Search</a></li>
-                    <li><a href="https://shubhendra-rajkarne.github.io/">Portfolio</a></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
+            </div>
+          </nav>
 
-            <!-- NAVBAR ENDS -->
+          <!-- NAVBAR ENDS -->
 
-          </header>
-        </div>
-      </div>
+          <!-- CONTACT MODAL -->
 
-      <div class="wrapper-main">
-        <div id="main" role="main" class="padding-top-large">
-          {{ content }}
-        </div>
-      </div>
+          <input class="modal-state" id="modal-1" type="checkbox">
+          <div class="modal">
+            <label class="modal-bg" for="modal-1"></label>
+            <div class="modal-body">
+              <label class="btn-close" for="modal-1">X</label>
+              <h4 class="modal-title">Contact Me</h4>
 
-      <div class="wrapper-footer">
-        <div class="container">
-          <footer class="footer">
-            {% include svg-icons.html %}
-          </footer>
-        </div>
+              <form action="https://formspree.io/f/xleagavq" method="POST">
+                <label">
+                  Your email:
+                  <input style="width: 100%; margin-bottom: 5%;" type="email" name="_replyto"
+                    placeholder="Email address" required>
+                  </label>
+
+                  <label>
+                    Subject:
+                    <input style="width: 100%; margin-bottom: 5%;" type="text" name="subject" placeholder="Subject"
+                      required>
+                  </label>
+
+                  <label>
+                    Your message:
+                    <textarea style="width: 100%; margin-bottom: 5%;" name="message"
+                      placeholder="What's on your mind?"></textarea>
+                  </label>
+
+                  <button type="submit" class="btn-block btn-success">Send</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- CONTACT MODAL ENDS -->
+
+        </header>
       </div>
     </div>
 
-    <!-- {% include analytics.html %} -->
-  </body>
+    <div class="wrapper-main">
+      <div id="main" role="main" class="padding-top-large">
+        {{ content }}
+      </div>
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% include svg-icons.html %}
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- {% include analytics.html %} -->
+</body>
+
 </html>
