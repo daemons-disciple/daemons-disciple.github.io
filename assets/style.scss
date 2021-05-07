@@ -146,13 +146,14 @@ table tr td :last-child {
   background-color: #eee;
 }
 
-// Makes paper full page length
-.paper{
-  height: 100vh;
+// Fixed author description card overflow, at the end of the post.
+.text-chunk {
+  overflow: auto;
 }
 
+
 .contact-nav{
-  font-family: Neucha, sans-serif;
+  font-family: "Neucha", "sans-serif";
   font-weight: 400; 
   margin-bottom: 9px;
 }
