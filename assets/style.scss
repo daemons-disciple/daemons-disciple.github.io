@@ -147,15 +147,13 @@ table tr td :last-child {
 }
 
 // Fixed author description card overflow, at the end of the post.
-.text-chunk {
-  overflow: auto;
-}
+
 
 
 .contact-nav{
   font-family: "Neucha", "sans-serif";
-  font-weight: 400; 
-  margin-bottom: 9px;
+  font-weight: 400 !important; 
+  margin-bottom: 9px !important;
 }
 
 .share-box {
