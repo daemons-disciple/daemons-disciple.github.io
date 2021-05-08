@@ -134,7 +134,7 @@ table tr td :last-child {
 
 // Keeps the contact me modal above the nav-bar
 .modal{
-  z-index: 101;
+  z-index: 101 !important;
 }
 
 #search-container {
