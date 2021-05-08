@@ -57,7 +57,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem !important;
+  font-size: 2.2rem !important;
 }
 
 @media (min-width: 769px){
@@ -73,11 +73,11 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem !important;
+  font-size: 1.8rem !important;
 }
 
 h4 {
-  font-size: 1.75rem !important;
+  font-size: 1.5rem;
   color: #222;
 }
 
@@ -131,6 +131,11 @@ table tr td :last-child {
     font-size: 3.333em;
     line-height: 0.75em;
 }*/
+
+// Keeps the contact me modal above the nav-bar
+.modal{
+  z-index: 101;
+}
 
 #search-container {
   text-align: center;
