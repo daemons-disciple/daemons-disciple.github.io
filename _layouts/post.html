@@ -35,8 +35,11 @@ layout: default
 
   <p>Subscribe to the newsletter if you want to receive alerts for new blog posts. Don't worry! I won't spam you.</p>
 
+  <!-- Hides/Unhides newsletter form -->
+  <button class="btn-warning" onclick="showNewsletter()">Newsletter</button>  
+
   <!-- START Newsletter  -->
-  <div class="sib-form" style="text-align: center;">
+  <div class="sib-form" style="text-align: center; display: none;" id="newsletter-section">
     <div id="sib-form-container" class="sib-form-container">
       <div id="error-message" class="sib-form-message-panel"
         style="font-size:16px; text-align:left; font-family:&quot;Neucha&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
@@ -148,5 +151,16 @@ layout: default
 
 <!-- Comment section ends -->
 
+<!-- Newsletter hide/unhide function -->
+<script>
+  function showNewsletter(){
+    var newsletterElement = document.getElementById("newsletter-section");
+    if (newsletterElement.style.display === "none"){
+      newsletterElement.style.display = "block";
+    } else {
+      newsletterElement.style.display = "none";
+    }
+  }
+</script>
   
 </article>
