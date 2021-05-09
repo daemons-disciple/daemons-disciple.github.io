@@ -125,6 +125,16 @@ table tr td :last-child {
 	margin-bottom: 0;
 }
 
+blockquote, q {
+  /* quotes: none; */
+  margin: 1.8em .8em;
+  padding: 0.1em 1em;
+  color: #666;
+  font-size: 22px;
+  font-style: italic;
+  background-color: #ede1ff;
+}
+
 /*.detailed .entry p:first-of-type:first-letter {
     float: left;
     margin: 0.13em 0.05em 0 -0.05em;
