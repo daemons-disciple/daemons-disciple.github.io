@@ -15,8 +15,11 @@
   <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
 
   <meta name="theme-color" content="#000000">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
-
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Newsletter style  -->
   <style>
@@ -59,7 +62,7 @@
 
           <nav class="border border-2 border-dark shadow shadow-large fixed split-nav">
             <div class="nav-brand">
-              <h3><img src="/images/logo.png" alt="logo" width="59vh" class="border-white"></h3>
+              <h3><a href="{{ site.baseurl }}/"><img src="/images/logo.png" alt="logo" width="59vh" class="border-white"></a></h3>
             </div>
             <div class="collapsible">
               <input id="collapsible1" type="checkbox" name="collapsible1">
@@ -143,9 +146,6 @@
             window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
   
             window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  
-  
-  
   
             window.translation = {
               common: {
