@@ -78,7 +78,7 @@
                   <li><a href="{{ site.baseurl }}/search">Search</a></li>
                   <li><a href="https://shubhendra-rajkarne.github.io/">Portfolio</a></li>
                   <li><a href="{{ site.baseurl }}/about">About</a></li>
-                  <li style="all: initial;"><label class=" contact-nav paper-btn btn-primary" for="modal-1">Contact Me</label></li>
+                  <li style="all: initial;"><button class="contact-nav paper-btn btn-primary" onclick="showContactMe()">Contact Me</button></li>
                 </ul>
               </div>
             </div>
@@ -163,6 +163,13 @@
     </div>
   </div>
 
+  <!-- Show ContactMe modal function -->
+  <script>
+    function showContactMe(){
+      modalElement = document.getElementById("modal-1")
+      modalElement.click()
+    }
+  </script>
  
 </body>
 
