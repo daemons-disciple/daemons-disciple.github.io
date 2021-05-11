@@ -53,6 +53,7 @@ h1 {
   font-size: 3rem !important;
   a {
     color: inherit;
+    overflow-wrap: break-word;
   }
 }
 
@@ -205,6 +206,7 @@ a {
   color: $blue;
   text-decoration: none;
 	cursor: pointer;
+  overflow-wrap: break-word;
   &:hover, &:active {
     color: $blue;
   }
@@ -722,6 +724,7 @@ Modules - reusable parts of our design
   background-color: #4CAF50;
   border-radius: 50px;
   color: #fff;
+  overflow-wrap: break-word;
 }
 
 .pagination a, .pagination span {

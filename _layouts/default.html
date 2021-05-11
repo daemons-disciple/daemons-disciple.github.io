@@ -60,7 +60,7 @@
 
           <!-- NAVBAR STARTS -->
 
-          <nav class="border border-2 border-dark shadow shadow-large fixed split-nav">
+          <nav class="border border-2 border-dark shadow shadow-large fixed split-nav" id="paper-nav" style="transition: 0.5s ease-in-out;">
             <div class="nav-brand">
               <h3><a href="{{ site.baseurl }}/"><img src="/images/logo.png" alt="logo" width="59vh" class="border-white"></a></h3>
             </div>
@@ -166,6 +166,23 @@
     function showContactMe(){
       modalElement = document.getElementById("modal-1")
       modalElement.click()
+    }
+
+    // Hide navbar on scroll
+
+    // Inital scroll position 
+    var prevScrollPos = window.pageYOffset;
+    window.onscroll = function() {
+      // Checks if the current scroll position exceeds that of previous position.
+      var currentScrollPos = window.pageYOffset;
+      var navbarElement = document.getElementById("paper-nav")
+      if (prevScrollPos > currentScrollPos) {
+        navbarElement.style.top = "0";
+      }else {
+        navbarElement.style.top = "-95px";
+      }
+      // Now, update the previous scroll position with prev scroll position
+      prevScrollPos = currentScrollPos
     }
   </script>
  
