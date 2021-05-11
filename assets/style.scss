@@ -36,14 +36,6 @@ body {
   width: 100%;
 }
 
-@font-face {
-  font-family: intelFont;
-  src: url(/fonts/intel_font.ttf);
-}
-.intelfont {
-  font-family: intelFont;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: $darkerGray;
 
@@ -728,7 +720,8 @@ Modules - reusable parts of our design
   border: none;
   background-color: #4CAF50;
   border-radius: 50px;
-  color: #fff;
+  color: #fff !important;
+  background-image: none;
 }
 
 .pagination a, .pagination span {
