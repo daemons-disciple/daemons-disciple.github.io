@@ -6,11 +6,15 @@ layout: default
 
 <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" /></a> -->
 
-<div class="site-info margin-top-large">
-  <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-  <p class="site-description">{{ site.description }}</p>
-  <ul class="inline">
-    <ul class="inline">
+<div class="margin-top-large paper border border-dotted" style="float: none;">
+  <h1 class="site-name text-center"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+  <p class="site-description text-center">{{ site.description }}</p>
+  
+  <div class="progress margin-bottom">
+    <div class="bar w-0" style="height: 0rem;"></div>
+  </div>
+
+    <ul class="inline padding-none text-center">
       <li><a href="{{ site.baseurl }}/archive">Archive</a></li>
       <li><a href="{{ site.baseurl }}/categories">Categories</a></li>
       <li><a href="{{ site.baseurl }}/search">Search</a></li>
