@@ -50,14 +50,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3rem !important;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.2rem !important;
 }
 
 @media (min-width: 769px){
@@ -73,11 +73,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   color: #222;
 }
 
@@ -241,14 +241,14 @@ strong, b {
 
 img {
   max-width: 100%;
-  border: none;
+  border: none !important;
 }
 
 p > img {
   text-align: center;
   display: block;
   margin: 0 auto;
-  border: none;
+  border: none !important;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -338,9 +338,9 @@ p > img {
   color: $darkGray;
   cursor: pointer;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 190%;
   letter-spacing: 1px;
-  text-align: left;
+  text-align: center;
 
   @include mobile {
     text-align: center;
