@@ -3,6 +3,8 @@
     padding: 7px 7px 7px 10px;
     overflow: auto;
     font-size: 95%;
+    border: 4px solid #1e1c3f;
+    border-radius: 5px;
 }
 
 code {
@@ -17,7 +19,7 @@ code {
 }
 
 .highlight .hll { background-color: #f1fa8c }
-.highlight  { background: #282a36; color: #f8f8f2 }
+.highlight  { background: #1e1c3f; color: #f8f8f2 }
 .highlight .c { color: #6272a4 } /* Comment */
 .highlight .err { color: #f8f8f2 } /* Error */
 .highlight .g { color: #f8f8f2 } /* Generic */
