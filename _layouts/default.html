@@ -14,8 +14,11 @@
   <!-- Paper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
 
+  <!-- Heading Font -->
+  <link href="http://fonts.cdnfonts.com/css/a-charming-font" rel="stylesheet">
+
   <meta name="theme-color" content="#000000">
-  
+
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicon-16x16.png">
@@ -43,7 +46,7 @@
   </style>
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
- 
+
 </head>
 
 <body>
@@ -60,9 +63,13 @@
 
           <!-- NAVBAR STARTS -->
 
-          <nav class="border border-2 border-dark shadow shadow-large fixed split-nav" id="paper-nav" style="transition: 0.5s ease-in-out;">
-            <div class="nav-brand">
-              <h3><a href="{{ site.baseurl }}/"><img src="/images/logo.png" alt="logo" width="59vh" class="border-white"></a></h3>
+          <nav class="border border-2 border-dark shadow shadow-large fixed split-nav" id="paper-nav"
+            style="transition: 0.5s ease-in-out;">
+            <div class="nav-brand" style="padding-top: 0.5rem;">
+              <h2 style="all: unset;"><a class="demonfont" href="/index.html"
+                  style="border-bottom: none; font-size: 1.8rem;"><span style="color: #d22b2b;">D</span>aemon's
+                  Disciple</a>
+              </h2>
             </div>
             <div class="collapsible">
               <input id="collapsible1" type="checkbox" name="collapsible1">
@@ -76,7 +83,8 @@
                   <li><a href="{{ site.baseurl }}/">Home</a></li>
                   <li><a href="https://shubhendra-rajkarne.github.io/">Portfolio</a></li>
                   <li><a href="{{ site.baseurl }}/about">About</a></li>
-                  <li style="all: initial;"><button class="contact-nav paper-btn btn-primary" onclick="showContactMe()">Contact Me</button></li>
+                  <li style="all: initial;"><button class="contact-nav paper-btn btn-primary"
+                      onclick="showContactMe()">Contact Me</button></li>
                 </ul>
               </div>
             </div>
@@ -84,40 +92,6 @@
 
           <!-- NAVBAR ENDS -->
 
-          <!-- CONTACT MODAL -->
-
-          <input class="modal-state" id="modal-1" type="checkbox">
-          <div class="modal">
-            <label class="modal-bg" for="modal-1"></label>
-            <div class="modal-body">
-              <label class="btn-close" for="modal-1">X</label>
-              <h4 class="modal-title">Contact Me</h4>
-
-              <form action="https://formspree.io/f/xleagavq" method="POST">
-                <label">
-                  Your email:
-                  <input style="width: 100%; margin-bottom: 5%;" type="email" name="_replyto"
-                    placeholder="Email address" required>
-                  </label>
-
-                  <label>
-                    Subject:
-                    <input style="width: 100%; margin-bottom: 5%;" type="text" name="subject" placeholder="Subject"
-                      required>
-                  </label>
-
-                  <label>
-                    Your message:
-                    <textarea style="width: 100%; margin-bottom: 5%;" name="message"
-                      placeholder="What's on your mind?"></textarea>
-                  </label>
-
-                  <button type="submit" class="btn-block btn-success">Send</button>
-              </form>
-            </div>
-          </div>
-
-          <!-- CONTACT MODAL ENDS -->
 
         </header>
       </div>
@@ -138,32 +112,67 @@
 
           <script>
             window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-  
+
             window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  
+
             window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-  
+
             window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  
+
             window.translation = {
               common: {
                 selectedList: '{quantity} list selected',
                 selectedLists: '{quantity} lists selected'
               }
             };
-  
+
             var AUTOHIDE = Boolean(0);
           </script>
           <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-          
+
         </footer>
       </div>
     </div>
   </div>
 
+
+  <!-- CONTACT MODAL -->
+
+  <input class="modal-state" id="modal-1" type="checkbox">
+  <div class="modal">
+    <label class="modal-bg" for="modal-1"></label>
+    <div class="modal-body">
+      <label class="btn-close" for="modal-1">X</label>
+      <h4 class="modal-title">Contact Me</h4>
+
+      <form action="https://formspree.io/f/xleagavq" method="POST">
+        <label">
+          Your email:
+          <input style="width: 100%; margin-bottom: 5%;" type="email" name="_replyto" placeholder="Email address"
+            required>
+          </label>
+
+          <label>
+            Subject:
+            <input style="width: 100%; margin-bottom: 5%;" type="text" name="subject" placeholder="Subject" required>
+          </label>
+
+          <label>
+            Your message:
+            <textarea style="width: 100%; margin-bottom: 5%;" name="message"
+              placeholder="What's on your mind?"></textarea>
+          </label>
+
+          <button type="submit" class="btn-block btn-success">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CONTACT MODAL ENDS -->
+
   <!-- Show ContactMe modal function -->
   <script>
-    function showContactMe(){
+    function showContactMe() {
       modalElement = document.getElementById("modal-1")
       modalElement.click()
     }
@@ -172,20 +181,20 @@
 
     // Inital scroll position 
     var prevScrollPos = window.pageYOffset;
-    window.onscroll = function() {
+    window.onscroll = function () {
       // Checks if the current scroll position exceeds that of previous position.
       var currentScrollPos = window.pageYOffset;
       var navbarElement = document.getElementById("paper-nav")
       if (prevScrollPos > currentScrollPos) {
         navbarElement.style.top = "0";
-      }else {
+      } else {
         navbarElement.style.top = "-95px";
       }
       // Now, update the previous scroll position with prev scroll position
       prevScrollPos = currentScrollPos
     }
   </script>
- 
+
 </body>
 
 </html>
